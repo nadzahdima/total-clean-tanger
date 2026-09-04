@@ -48,7 +48,7 @@ p {
 .navbar {
     background: var(--dark-luxury);
     color: var(--accent-white);
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -62,17 +62,32 @@ p {
     align-items: center;
 }
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: var(--primary-gold);
-    font-family: 'Playfair Display', serif;
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.logo::before {
-    content: "✨ ";
-    margin-right: 5px;
+.logo-container:hover {
+    transform: scale(1.05);
+}
+
+.logo-image {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--primary-gold);
+    font-family: 'Playfair Display', serif;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .nav-links {
@@ -758,6 +773,15 @@ p {
         font-size: 0.85rem;
     }
 
+    .logo-text {
+        font-size: 1rem;
+    }
+
+    .logo-image {
+        height: 40px;
+        width: 40px;
+    }
+
     .hero-content h1 {
         font-size: 2.2rem;
     }
@@ -799,6 +823,10 @@ p {
     .nav-links {
         gap: 0.5rem;
         font-size: 0.75rem;
+    }
+
+    .logo-text {
+        font-size: 0.9rem;
     }
 
     .hero-content h1 {
